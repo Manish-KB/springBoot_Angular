@@ -32,9 +32,12 @@ export class StudentListComponent {
   }
 
   deleteStudent(id: number) {
+    const confirmDelete=window.confirm("Are you sure you want to delete?");
+    if(confirmDelete){
     this.studentService.deleteStudent(id).subscribe(data => {
       this.getStudents();
     })
+  }
   }
 
     viewStudent(id: number)

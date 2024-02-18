@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +21,11 @@ import { NgxPaginationModule } from 'ngx-pagination';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule,FormsModule, NgxPaginationModule,
+    AppRoutingModule, HttpClientModule,FormsModule, NgxPaginationModule, 
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

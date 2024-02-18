@@ -1,13 +1,13 @@
 <h3>Student Details</h3>
 <div class="container">
-    <button class="btn btn-info"><a [routerLink]="['/add-student']">Add Student</a></button>
+    <a [routerLink]="['/add-student']"><button class="btn btn-info">Add Student</button></a>
     <table class="table table-striped" *ngIf="students">
         <thead>
             <tr>
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email ID</th>
-                <th>Actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
