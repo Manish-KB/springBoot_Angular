@@ -1,24 +1,32 @@
-<h2>Student Details</h2>
+<h3>Student Details</h3>
+<div class="container">
+    <button class="btn btn-info"><a [routerLink]="['/add-student']">Add Student</a></button>
+    <table class="table table-striped" *ngIf="students">
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students | paginate: {itemsPerPage: 10, currentPage: p}">
+                <td>{{student.firstName}}</td>
+                <td>{{student.lastName}}</td>
+                <td>{{student.emailId}}</td>
+                <td>
+                    <button (click)="updateStudent(student.id)" class="btn"><i
+                            class="fa-solid fa-pen-to-square"></i></button>
+                    <button (click)="viewStudent(student.id)" class="btn"><i class="fa-solid fa-eye"></i></button>
+                    <button (click)="deleteStudent(student.id)" class="btn"><i class="fa-solid fa-trash"></i></button>
+                </td>
 
 
-<table class="table table-striped" *ngIf="students">
-    <thead>
-        <tr>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Email ID</th>
-           <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let student of students">
-            <td>{{student.firstName}}</td>
-            <td>{{student.lastName}}</td>
-            <td>{{student.emailId}}</td>
-            <td><button (click)="updateStudent(student.id)" class="btn btn-info">Update</button></td>
-            <td><button (click)="deleteStudent(student.id)" class="btn btn-danger">Delete</button></td>
-            <td><button (click)="viewStudent(student.id)" class="btn btn-success">View</button></td> 
+            </tr>
 
-          </tr>
-    </tbody>
-</table>
+        </tbody>
+        <pagination-controls (pageChange)="p= $event" class="float-right"></pagination-controls>
+
+    </table>
+</div>

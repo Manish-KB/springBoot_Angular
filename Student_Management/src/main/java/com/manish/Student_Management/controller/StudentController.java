@@ -43,7 +43,7 @@ public ResponseEntity<Student> updateEmployee(@PathVariable Long id, @RequestBod
     Student student=studentRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Student Not Found"));
     student.setFirstName(studentObj.getFirstName());
     student.setLastName(studentObj.getLastName());
-    student.setLastName(studentObj.getEmailId());
+    student.setEmailId(studentObj.getEmailId());
 
     Student newStudent=studentRepository.save(student);
     return ResponseEntity.ok(newStudent);

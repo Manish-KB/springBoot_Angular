@@ -9,7 +9,7 @@ import { AddStudentComponent } from './add-student/add-student.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule,FormsModule
+    AppRoutingModule, HttpClientModule,FormsModule, NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

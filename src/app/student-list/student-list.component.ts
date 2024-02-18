@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class StudentListComponent {
   students: Student[];
+  p:any;
   constructor(private studentService: StudentService, private router: Router) {
 
   }
