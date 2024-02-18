@@ -22,20 +22,16 @@ export class UpdateStudentComponent implements OnInit {
 
 
   }
-
-  updateStudent() {
-    this.studentService.addStudent(this.student).subscribe(data => {
-      console.log(data)
-    });
-
-
-  }
+  
   onFormSubmit() {
-    this.updateStudent();
-    this.goToStudentList();
+    this.studentService.updateStudent(this.id,this.student).subscribe(data=>{
+      this.goToStudentList();
+    })
+    
 
   }
   goToStudentList() {
     this.router.navigate(['/students']);
   }
 }
+
