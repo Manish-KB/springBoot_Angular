@@ -1,0 +1,21 @@
+<h2>Student Details</h2>
+
+
+<table class="table table-striped" *ngIf="students">
+    <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email ID</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.emailId}}</td>
+            
+          </tr>
+    </tbody>
+</table>
