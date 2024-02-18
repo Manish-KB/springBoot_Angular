@@ -1,9 +1,31 @@
-.btn{
+.btn {
     float: right;
-    
-   
+
+
 }
-.btn a{
+
+.btn a {
     color: black;
     text-decoration: none;
 }
+
+.table-container {
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow:  5px 5px 10px #dbdbdb,
+                 -5px -5px 10px #ffffff;
+
+   
+}
+
+.custom-table {
+    background: transparent;
+  
+}
+
+.pagen {
+    border-radius: 24px;
+}
+
+
+

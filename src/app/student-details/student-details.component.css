@@ -1,3 +1,22 @@
 a{
     text-decoration: none;
 }
+
+.container-class{
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow:  5px 5px 10px #dbdbdb,
+                 -5px -5px 10px #ffffff;
+
+    margin-top: 2%;
+    width: 30rem;
+    height: 10rem;
+    
+}
+
+.detail-div{
+    margin: 1rem;
+    background-color: rgba(229, 228, 228, 0.53);
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+}

@@ -1,3 +1,16 @@
 a{
     text-decoration: none;
 }
+
+.container-class{
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow:  5px 5px 10px #dbdbdb,
+                 -5px -5px 10px #ffffff;
+
+    margin-top: 2%;
+}
+
+.btn{
+    margin:1rem;
+}

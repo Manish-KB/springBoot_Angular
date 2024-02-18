@@ -1,10 +1,15 @@
-
 <a [routerLink]="['/students']"><i class="fa-solid fa-angles-left"></i>Back</a>
 <h2>Student Details</h2>
-<div>
-    <div>
-        First name: {{student.firstName}}
+<div class="container container-class">
+    <div class="detail-div">
+        <b>First name: </b>{{student.firstName}}
     </div>
-    <div>Last Name: {{student.lastName}} </div>
-    <div>Email ID: {{student.emailId}}</div>
+    <div class="detail-div"><b>Last Name: </b>{{student.lastName}} </div>
+    <div class="detail-div"><b>Email ID: </b>{{student.emailId}}</div>
+    <div >
+        <button (click)="updateStudent(student.id)" class="btn " data-toggle="tooltip" data-placement="top"
+            title="Edit">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+        <br>
+    </div>
 </div>

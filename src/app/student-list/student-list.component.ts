@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class StudentListComponent {
   students: Student[];
   p:any;
+  searchText:any;
   constructor(private studentService: StudentService, private router: Router) {
 
   }

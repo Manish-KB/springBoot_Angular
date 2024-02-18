@@ -6,22 +6,23 @@ import { AppComponent } from './app.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddStudentComponent } from './add-student/add-student.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { SearchPipe } from './search.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
     AddStudentComponent,
     UpdateStudentComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent, SearchPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule,FormsModule, NgxPaginationModule, 
+    AppRoutingModule, HttpClientModule,FormsModule, NgxPaginationModule, ReactiveFormsModule,
   ],
   providers: [
     provideAnimationsAsync()

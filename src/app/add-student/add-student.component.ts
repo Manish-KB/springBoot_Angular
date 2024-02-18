@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { Student } from '../student';
 import { StudentService } from '../student.service';
 import { Router } from '@angular/router';
-
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-add-student',
   templateUrl: './add-student.component.html',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class AddStudentComponent {
   student: Student = new Student();
 
-
+  
   constructor(private studentService: StudentService, private router: Router) { }
   onFormSubmit() {
     this.studentService.addStudent(this.student).subscribe(data => {

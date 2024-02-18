@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Student } from '../student';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StudentService } from '../student.service';
 
 @Component({
@@ -11,11 +11,17 @@ import { StudentService } from '../student.service';
 export class StudentDetailsComponent {
 id:number;
 student:Student;
-constructor(private route:ActivatedRoute, private studentService:StudentService){
+constructor(private route:ActivatedRoute, private studentService:StudentService, private router: Router){
   this.id=this.route.snapshot.params['id'];
   this.student=new Student();
   this.studentService.getStudentById(this.id).subscribe(data=>{
     this.student=data;
   })
 }
+
+updateStudent(id: number) {
+  this.router.navigate(['update-student', id]);
+
+}
+
 }

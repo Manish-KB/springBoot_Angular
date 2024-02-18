@@ -1,17 +1,19 @@
-<h3>Student Details</h3>
-<div class="container">
-    <a [routerLink]="['/add-student']"><button class="btn btn-info">Add Student <i class="fa-solid fa-plus"></i></button></a>
-    <table class="table table-striped" *ngIf="students">
+<h2>Student Details</h2>
+
+<div class="table-container">
+    <table class="table custom-table" *ngIf="students">
         <thead>
             <tr>
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email ID</th>
-                <th></th>
+                <th><input type="text" [(ngModel)]="searchText"></th>
+                <th><a [routerLink]="['/add-student']" style="float: right; "><button class="btn btn-info"><i class="fa-solid fa-circle-plus"></i></button></a>
+                </th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let student of students | paginate: {itemsPerPage: 10, currentPage: p}">
+            <tr *ngFor="let student of students | search: searchText | paginate: {itemsPerPage: 10, currentPage: p} ">
                 <td>{{student.firstName}}</td>
                 <td>{{student.lastName}}</td>
                 <td>{{student.emailId}}</td>
@@ -26,7 +28,8 @@
             </tr>
 
         </tbody>
-        <pagination-controls (pageChange)="p= $event" class="float-right"></pagination-controls>
+        <pagination-controls (pageChange)="p= $event" class="float-right pagen"></pagination-controls>
 
     </table>
 </div>
+
