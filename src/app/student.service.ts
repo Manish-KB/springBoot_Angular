@@ -19,4 +19,8 @@ private baseURL="http://localhost:8080/api/v1/students"
     return this.httpClient.post(`${this.baseURL}`, student)
   }
  
+
+  getStudentById(id:number):Observable<Student>{
+    return this.httpClient.get<Student>(`${this.baseURL}/${id}`);
+  }
 }

@@ -7,7 +7,7 @@
             <th>First name</th>
             <th>Last name</th>
             <th>Email ID</th>
-           
+           <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +15,7 @@
             <td>{{student.firstName}}</td>
             <td>{{student.lastName}}</td>
             <td>{{student.emailId}}</td>
+            <td><button (click)="updateStudent(student.id)" class="btn btn-info">Update</button></td>
             
           </tr>
     </tbody>

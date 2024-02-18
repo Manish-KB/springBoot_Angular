@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Student } from '../student';
 import { StudentService } from '../student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-list',
@@ -9,8 +10,14 @@ import { StudentService } from '../student.service';
 })
 export class StudentListComponent {
 students: Student[] ;
-constructor(private studentService:StudentService){
+constructor(private studentService:StudentService, private router:Router){
 
+}
+
+updateStudent(id:number)
+{
+  this.router.navigate(['update-student',id]);
+  
 }
 
 ngOnInit(): void{
