@@ -32,6 +32,13 @@ private getStudents(){
     });
 }
 
+deleteStudent(id:number){
+  this.studentService.deleteStudent(id).subscribe(data=>{
+    this.getStudents();
+  })
+
+}
+
 
 // ngOnInit():void{
 //   this.students=[{

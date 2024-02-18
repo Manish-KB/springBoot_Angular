@@ -16,7 +16,8 @@
             <td>{{student.lastName}}</td>
             <td>{{student.emailId}}</td>
             <td><button (click)="updateStudent(student.id)" class="btn btn-info">Update</button></td>
-            
+            <td><button (click)="deleteStudent(student.id)" class="btn btn-danger">Delete</button></td>
+
           </tr>
     </tbody>
 </table>
