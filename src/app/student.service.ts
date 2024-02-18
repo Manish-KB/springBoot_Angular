@@ -18,5 +18,5 @@ private baseURL="http://localhost:8080/api/v1/students"
   addStudent(student: Student):Observable<Object>{
     return this.httpClient.post(`${this.baseURL}`, student)
   }
-
+ 
 }
