@@ -1,6 +1,6 @@
 <h3>Student Details</h3>
 <div class="container">
-    <a [routerLink]="['/add-student']"><button class="btn btn-info">Add Student</button></a>
+    <a [routerLink]="['/add-student']"><button class="btn btn-info">Add Student <i class="fa-solid fa-plus"></i></button></a>
     <table class="table table-striped" *ngIf="students">
         <thead>
             <tr>
@@ -16,10 +16,10 @@
                 <td>{{student.lastName}}</td>
                 <td>{{student.emailId}}</td>
                 <td>
-                    <button (click)="updateStudent(student.id)" class="btn"><i
-                            class="fa-solid fa-pen-to-square"></i></button>
-                    <button (click)="viewStudent(student.id)" class="btn"><i class="fa-solid fa-eye"></i></button>
-                    <button (click)="deleteStudent(student.id)" class="btn"><i class="fa-solid fa-trash"></i></button>
+                    <button (click)="updateStudent(student.id)" class="btn"  data-toggle="tooltip" data-placement="top" title="Edit">
+                        <i class="fa-solid fa-pen-to-square"></i></button>
+                    <button (click)="viewStudent(student.id)" class="btn" data-toggle="tooltip" data-placement="top" title="View Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                    <button (click)="deleteStudent(student.id)" class="btn" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa-solid fa-trash" style="color: #f22525;"></i></button>
                 </td>
 
 

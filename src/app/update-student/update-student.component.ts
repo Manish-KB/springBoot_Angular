@@ -11,6 +11,7 @@ import { Student } from '../student';
 export class UpdateStudentComponent implements OnInit {
   id: number;
   student = new Student();
+
   constructor(private studentService: StudentService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
