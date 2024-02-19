@@ -12,13 +12,14 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { NgxPaginationModule } from 'ngx-pagination';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SearchPipe } from './search.pipe';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
     AddStudentComponent,
     UpdateStudentComponent,
-    StudentDetailsComponent, SearchPipe
+    StudentDetailsComponent, SearchPipe, PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
