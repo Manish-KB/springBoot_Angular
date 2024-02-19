@@ -1,14 +1,15 @@
 <h2>Student Details</h2>
 
 <div class="table-container">
-    <table class="table custom-table" *ngIf="students">
-        <thead>
-            <tr>
+    <table class="table custom-table table-striped" *ngIf="students">
+        <thead >
+            <tr >
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email ID</th>
-                <th><input type="text" [(ngModel)]="searchText"></th>
-                <th><a [routerLink]="['/add-student']" style="float: right; "><button class="btn btn-info"><i class="fa-solid fa-circle-plus"></i></button></a>
+                <th><input class="" type="text" [(ngModel)]="searchText" placeholder="Search... ">&nbsp;<i class="fa-solid fa-magnifying-glass"></i>
+                    <a [routerLink]="['/add-student']" style="float: right; "><button class="btn btn-success"><i
+                                class="fa-solid fa-circle-plus"></i> Add</button></a>
                 </th>
             </tr>
         </thead>
@@ -18,10 +19,13 @@
                 <td>{{student.lastName}}</td>
                 <td>{{student.emailId}}</td>
                 <td>
-                    <button (click)="updateStudent(student.id)" class="btn"  data-toggle="tooltip" data-placement="top" title="Edit">
+                    <button (click)="updateStudent(student.id)" class="btn" data-toggle="tooltip" data-placement="top"
+                        title="Edit">
                         <i class="fa-solid fa-pen-to-square"></i></button>
-                    <button (click)="viewStudent(student.id)" class="btn" data-toggle="tooltip" data-placement="top" title="View Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-                    <button (click)="deleteStudent(student.id)" class="btn" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa-solid fa-trash" style="color: #f22525;"></i></button>
+                    <button (click)="viewStudent(student.id)" class="btn" data-toggle="tooltip" data-placement="top"
+                        title="View Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                    <button (click)="deleteStudent(student.id)" class="btn" data-toggle="tooltip" data-placement="top"
+                        title="Delete"><i class="fa-solid fa-trash" style="color: #f22525;"></i></button>
                 </td>
 
 
@@ -32,4 +36,3 @@
 
     </table>
 </div>
-
