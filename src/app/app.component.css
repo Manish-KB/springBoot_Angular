@@ -11,3 +11,7 @@
 .navbar{
     width: 100vw;
 }
+
+nav-item :active{
+    background-color: rgb(82, 80, 80); ;
+}
