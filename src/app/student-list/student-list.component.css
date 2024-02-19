@@ -37,4 +37,17 @@
 
 }
 
+.add-btn{
+    border-radius: 2rem;
+    background-color: rgb(52, 52, 52);
+    color: white;
+}
 
+.add-btn:hover{
+    background-color: rgb(74, 73, 73);
+    scale:0.2rem;
+}
+
+.add-btn i:hover{
+    scale:0.2rem;
+}

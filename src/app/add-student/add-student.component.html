@@ -10,7 +10,7 @@
         </div>
     
         <div class="form-group">
-            <label >last Name</label>
+            <label >Last Name</label>
             <input type="text" class="form-control" id="lastName" formControlName="lastName"  [(ngModel)]="student.lastName" name="lastName">
             <div *ngIf="form.get('lastName')!.hasError('required') && form.get('lastName')!.touched" class="text-danger">
                 Last Name is required

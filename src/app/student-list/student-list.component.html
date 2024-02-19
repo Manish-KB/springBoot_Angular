@@ -2,19 +2,25 @@
 
 <div class="table-container">
     <table class="table custom-table table-striped" *ngIf="students">
-        <thead >
-            <tr >
+        <thead>
+            <tr>
+                <!-- <th>Sl No.</th> -->
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email ID</th>
-                <th><input class="" type="text" [(ngModel)]="searchText" placeholder="Search... ">&nbsp;<i class="fa-solid fa-magnifying-glass"></i>
-                    <a [routerLink]="['/add-student']" style="float: right; "><button class="btn btn-success"><i
-                                class="fa-solid fa-circle-plus"></i> Add</button></a>
+                <th>
+                   
+                   <span> <input class="form-control mr-sm-2" type="search" [(ngModel)]="searchText" placeholder="Search.." aria-label="Search"></span> <br>
+                             <a [routerLink]="['/add-student']" style="float: right; ">
+                    
+                    <button class="btn add-btn btn-success"><i class="fa-solid fa-circle-plus"></i> Add</button></a>
+
                 </th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let student of students | search: searchText | paginate: {itemsPerPage: 10, currentPage: p} ">
+            <tr *ngFor="let student of students | search: searchText | paginate: {itemsPerPage: 5, currentPage: p} ; let i=index  ">
+                <!-- <td>{{i+1}}</td> -->
                 <td>{{student.firstName}}</td>
                 <td>{{student.lastName}}</td>
                 <td>{{student.emailId}}</td>
